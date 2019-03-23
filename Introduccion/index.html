@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Practica</title>
+    </head>
+    <body>
+        <!--ATRIBUTOS GLOBALES: ID="IDENTIFICACION UNICA"(#)  CLASS="GRUPO DE ELEMENTOS (.)(se pueden aplicar mas de un class por etiqueta divididos po espacio dentro de "")"-->
+
+        <header> <!--ENCABEZADO-->
+                    
+                    <div id="tituloPrincipal">
+                        <h1>Pagina Principal</h1>
+                    </div>
+                   
+                    <div> <!--SE HACEN DIVISIONES PARA FACILITAR EL USO EN FLEXBOX-->
+                        <nav>
+                            <ul>
+                                <li><a href="./html/pagina2.html" target="_blank">Pagina 2</a></li>
+                                <li><a href="./html/pagina3.html" target="_blank">Pagina 3</a></li>
+                                <li><a href="#footer" target="_blank">Footer</a></li> <!--Con # llamo por id
+                                -->
+                            </ul>
+                        </nav> <!--BARRA DE NAVEGACION-->
+                    </div>
+        </header>
+       
+        <div id="articulos">
+            <section>
+           
+                <article></article> <!--ARTICULOS-->
+           
+            </section><!--SECCIONES-->
+        </div>
+
+        <div id="barraLateral">
+            <aside>
+            
+            </aside> <!--APARTADOS - BARRA LATERAL-->
+        </div>
+
+        
+        <div></div> <!--DIVISIONES MODELOS DE CAJA-->
+
+        <!--LINEA HORIZONTAL-->
+        <hr>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Eum laboriosam eos culpa minus minima deleniti consequuntur corporis, <br>
+            non dicta quasi esse ducimus quidem itaque ad modi ex molestiae. Sit, sunt?
+        </p>
+
+        <!--Listas, Estructura anidada-->
+        <p>Lista ordenada</p>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Lista desordenada</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>               
+             
+        <!--Al clickear la imagen abre el enlace-->
+        <a href="https://www.youtube.com/" target="_blank">
+            <img src="./imagenes/imagen.png"> <br>
+        </a>
+        
+        <!--Enlaces, con _blank habre una nueva pestana-->
+        <a href="https://www.youtube.com/" target="_blank">Mi Enlace</a> <br>
+
+        <a href="./pagina2.html" target="_blank">Pagina 2</a> <br>
+
+        <b>Texto en negrita</b> <br>
+        
+        <video src="" controls></video> <!--Controls pone controles (play, stop)-->
+
+        <p>Representando una tabla</p>
+        
+        <section>
+            <table border="2"> <!--Creo una tabla con borde-->
+                <tr> <!--FILAS-->
+                    <td>item1</td> <!--COLUMNAS-->
+                    <td>item2</td>
+                    <td>item3</td>
+                </tr>
+                <tr>
+                    <td>item4</td>
+                    <td>item5</td>
+                    <td>item6</td>
+                </tr>
+                <tr>
+                    <td>item7</td>
+                    <td>item8</td>
+                    <td>item9</td>
+                </tr>
+            </table>
+        </section>
+        
+        <form action="">
+            <!--INPUT -> type-->
+            <!--label: para asociar en for con el id de input-->
+            <label for="nombre">Nombre:</label>  <input type="text" id="nombre"> <!--text, para introducir texto-->
+            <p>Usuario:</p>  <input type="text">
+            <p>FN:</p><input type="date"> <!--date, para poner fechas-->
+            <p>Tipo de tarjeta:</p><input type="radio" name="tarjeta" value="1"> <!--circulos para marcar-->
+            <input type="radio" name="tarjeta" value="2"> 
+            <p>Tipo de cuenta</p><input type="checkbox">
+            <input type="checkbox"> <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea><br>
+            <input type="submit">
+            <input type="reset" value="Borrar Datos">
+
+        </form>
+
+        <footer id="footer"></footer> <!--PIE DE PAGINA-->
+    </body>
+</html>
