@@ -1,0 +1,67 @@
+/*Para importar fuentes desde google*/
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+
+*{
+    padding: 0px; /*resetea los margenes*/
+    margin: 0px;
+}
+
+
+/*Selectores de elementos*/
+h1{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    border-color: black;
+    background-color: white;
+    border-radius: 20px;
+    /*display: none;*/
+}
+
+p{
+    color: red;
+    text-align: center;
+}
+
+body{
+    background-color: lightblue;
+    height: 70vh;;
+}
+
+header{
+    background-image: url("../imagenes/descarga.jfif");
+    height: 30vh;
+}
+
+article{
+    background-color: cadetblue;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+footer{
+    background-color: brown;
+}
+
+/*Selectores de id*/
+#parrafo1{
+    text-align: center;
+    color: blue;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/*Selector de clases*/
+.grupo{
+    color: green;
+    text-align: right;
+    font-family: 'Germania One', cursive;
+    
+}
+
+#imagen{
+    /*background-image: url("../imagenes/animacion.jpg");*/
+    background-repeat: space;
+}
