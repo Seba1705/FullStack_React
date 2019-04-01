@@ -57,12 +57,10 @@ article{
 
 footer{
     padding: 30px;
-    background-color: black;
+    background-color: black;    
+    color: white;
 }
 
-label{
-    
-}
 
 /************************************************************************************************/
 
@@ -94,12 +92,11 @@ label{
     color: black;
 }
 
-#contact{
-    color: white;
-}
+
 
 #frmContact{
-    text-align: left;
+    text-align: center;
+
 }
 
 #extra{
@@ -113,11 +110,15 @@ label{
 }
 
 #home{
-    background-image: url("../imagenes/libro.jpg");
+    background-image: url("../imagenes/pcblank.jpeg");
     background-attachment: fixed; 
     background-repeat: no-repeat; 
     background-size: cover;
-    padding: 200px;
+    padding: 250px;
+}
+
+#datos{
+    color: white;
 }
 
 /************************************************************************************************/
@@ -146,3 +147,8 @@ label{
     
   }
 
+.contact{
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
