@@ -1,0 +1,20 @@
+header{
+    height: 200px;  /*Alto*/
+    width: 200px; /*Ancho*/
+    padding: 20px; /*Espacio entre contenido y margenes interiores*/
+    border: 10px solid red; /*Espacio - Tipo - Color*/
+    margin: 20px; /*Espacio entre contenido y margenes exteriores*/
+    background-color: lightseagreen;
+
+    
+}
+
+body{
+    background-color: gainsboro;
+}
+
+/*NO APLICAR MARGIN A HEADER - FOOTER - MAIN*/
+
+.container{
+    display: flex; /*Aplico a los padres*/
+}
