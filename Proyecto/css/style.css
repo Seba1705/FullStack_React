@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Great+Vibes');
+
+/******************** RESETEO DE VALORES ********************/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/******************** BODY ********************/
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/******************** HEADER ********************/
+
+header{
+    display: flex;
+    flex-flow: column wrap;
+    height: 35vh;
+    background-color: black;
+}
+
+/******************** ELEMENT-HEADER-1 ********************/
+
+    .element-header-1{
+        flex: 1 1 auto;
+        text-align: center;
+        flex-flow: row wrap;
+        color: white;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 60px;
+        padding: 60px;
+    }
+
+/******************** ELEMENT-HEADER-2 ********************/
+
+    .element-header-2{
+        flex: 1 1 auto;
+    }
+
+        .menu{
+            display: flex;
+            flex-flow: column wrap;
+        }
+            .menu ul{
+                display: flex;
+                flex-flow: row wrap;
+            }
+                .menu ul li{
+                    list-style: none;
+                    flex: 1 1 auto;
+                }
+
+                    .menu ul li a{
+                        display: block;
+                        text-decoration: none;
+                        padding: 20px;
+                        text-align: center;
+                        font-size: 1rem;
+                        background-color: black;
+                        color: white;
+                    }
+
+                    .menu ul li a:hover{
+                        border-bottom: 2px solid white;
+                    }
+
+                    .redes{
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        
+                    }
+                    
+                    .redes a{
+                       padding: 10px;
+                       
+                    }
+
+                    .redes .icons{
+                        width: 15px;
+                        background-color: white;
+                    }
+
+/******************** MAIN ********************/
+
+main{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+    main section:nth-child(odd){
+        background-color: black;
+        color: white;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    h3{
+        text-align: left;
+        font-size: 30px;
+        padding: 20px;
+    }  
+
+    main section:nth-child(odd){
+        background-color: black;
+        color: white;
+    }
+
+/******************** ELEMENT-MAIN-1 ********************/
+
+    .element-main-1{
+        flex: 1 1 auto;
+        background-image: url("../imagenes/aire.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 250px;
+    }
+
+
+/******************** ELEMENT-MAIN-3 ********************/
+
+    .element-main-3{
+        flex: 1 1 auto;
+        padding: 50px;
+        height: 100vh;
+    }
+
+/******************** ELEMENT-MAIN-5 ********************/
+
+    .element-main-5{
+        flex: 1 1 auto;
+        text-align: center;
+        font-family: 'Great Vibes', cursive;
+        padding: 30px;
+        height: 100vh;
+    }
+
+/******************** FOOTER ********************/
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    height: 15vh;
+    
+}
+
+/******************** ELEMENT-FOOTER-1 ********************/
+
+    .element-footer-1{
+       
+        flex: 1 1 auto;
+    }
+    
+/******************** ELEMENT-FOOTER-2 ********************/
+
+    .element-footer-2{
+        flex: 1 1 auto;
+        flex-flow: row;
+    }
+
+        .icons{
+            flex: 1 1 auto;
+            flex-flow: row wrap;
+            background-color: gray;
+        }
+
+            .icons a{
+                padding: 10px;
+            }
+
+                .icons a img{
+                    border-radius:50px;
+                    height:40px;;
+                    width: 40px;
+                }   
+
+
+             
