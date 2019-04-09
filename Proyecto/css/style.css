@@ -22,7 +22,7 @@
 header{
     display: flex;
     flex-flow: column wrap;
-    height: 30vh;
+    /* height: 35vh; */
     background-color: black;
 }
 
@@ -54,10 +54,11 @@ header{
             .menu ul{
                 display: flex;
                 flex-flow: row wrap;
+                justify-content: center;
+                
             }
                 .menu ul li{
                     list-style: none;
-                    flex: 1 1 auto;
                 }
 
                     .menu ul li a{
@@ -65,7 +66,7 @@ header{
                         text-decoration: none;
                         padding: 20px;
                         text-align: center;
-                        font-size: 1rem;
+                        font-size: 1.5rem;
                         background-color: black;
                         color: white;
                     }
@@ -74,22 +75,7 @@ header{
                         border-bottom: 2px solid white;
                     }
 
-                    .redes{
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: center;
-                        
-                    }
                     
-                    .redes a{
-                       padding: 10px;
-                       
-                    }
-
-                    .redes .icons{
-                        width: 15px;
-                        background-color: white;
-                    }
 
 /******************** MAIN ********************/
 
@@ -105,13 +91,13 @@ main{
 
         section h2{
             text-align: left;
-            font-size: 4rem;
+            font-size: 3rem;
             padding: 20px;
         }
 
         section h3{
             text-align: left;
-            font-size: 3rem;
+            font-size: 2rem;
             padding: 20px;
         }  
 
@@ -140,12 +126,12 @@ main{
 
         .study{
             padding: 20px;
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         .date{
             padding: 20px;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-style: italic;
         }   
 
@@ -176,19 +162,18 @@ main{
         font-family: 'Great Vibes', cursive;
         text-align: center;
     }
-        .element-main-2 h4{
+        .element-main-5 h4{
             text-align: center;
-            font-size: 4rem;
+            font-size: 3rem;
             padding: 20px;
         } 
 
-/******************** FOOTER ********************/
+/******************** FOO3ER ********************/
 
 footer{
     display: flex;
     flex-flow: row wrap;
     height: 15vh;
-    
 }
 
 /******************** ELEMENT-FOOTER-1 ********************/
@@ -201,24 +186,27 @@ footer{
 /******************** ELEMENT-FOOTER-2 ********************/
 
     .element-footer-2{
-        flex: 1 1 auto;
-        flex-flow: row;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-end;
+        
     }
 
         .icons{
-            flex: 1 1 auto;
-            flex-flow: row wrap;
-            background-color: gray;
+            display: flex;
+            background-color: none;
         }
 
             .icons a{
                 padding: 10px;
+                background-color: none;
             }
 
                 .icons a img{
+                    background-color: none;
                     border-radius:50px;
-                    height:40px;;
-                    width: 40px;
+                    height:30px;;
+                    width: 30px;
                 }   
 
 
