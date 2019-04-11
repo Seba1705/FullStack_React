@@ -84,7 +84,18 @@ main{
     
 }
 
-/******************** MAIN ********************/
+/******************** ELEMENT-MAIN-1 ********************/
+
+    .element-main-1{
+        flex: 1 1 auto;
+        background-image: url("../images/pc-3.jpeg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 250px;
+    }
+
+/******************** FOOTER ********************/
 
 footer{
     background-color: #252932;
