@@ -1,4 +1,8 @@
-/******************** RESETEO DE VALORES ********************/
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Great+Vibes');
+
+/******************************************************** RESETEO DE VALORES ********************************************************/
 
 *{
     padding: 0;
@@ -8,20 +12,20 @@
     font-family: sans-serif;
 }
 
-/******************** BODY ********************/
+/******************************************************** BODY ********************************************************/
 
 .container{
     display: flex;
     flex-flow: column nowrap;
 }
 
-/******************** HEADER ********************/
+/******************************************************** HEADER ********************************************************/
 
 header{
     display: flex;
     flex-flow: column wrap;
     background-color: #252932;
-    height: 35vh;
+    /* height: 35vh; */
     justify-content: center;
     align-content: center;
 }
@@ -77,7 +81,7 @@ header{
                         border-radius: 50px;
                     }
 
-/******************** MAIN ********************/
+/******************************************************** MAIN ********************************************************/
 
 main{
     background: #fffffa;
@@ -87,7 +91,7 @@ main{
 /******************** ELEMENT-MAIN-1 ********************/
 
     .element-main-1{
-        flex: 1 1 auto;
+        display: flex;
         background-image: url("../images/pc-3.jpeg");
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -95,9 +99,83 @@ main{
         padding: 250px;
     }
 
-/******************** FOOTER ********************/
+/******************** ELEMENT-MAIN-2 ********************/
+
+    .element-main-2{
+        flex: 1 1 auto;
+    
+    }
+
+/******************** ELEMENT-MAIN-3 ********************/
+
+    .element-main-3{
+        display: flex;
+        flex-flow: column wrap;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+    }
+
+        .element-main-3 h2{
+            font-size: 50px;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .inst{
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .study{
+            font-size: 20px;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .date{
+            font-size: 20px;
+            padding: 20px;
+            font-style: italic;
+        }   
+
+
+/******************** ELEMENT-MAIN-4 ********************/
+
+    .element-main-2{
+        flex: 1 1 auto;
+
+    }
+
+/******************** ELEMENT-MAIN-5 ********************/
+
+    .element-main-5{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+        .extra{
+            font-size: 50px;
+            padding: 20px;
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+        }
+
+
+/******************************************************** FOOTER ********************************************************/
 
 footer{
     background-color: #252932;
-    
+    height: 15vh;
 }
+
+/******************** ELEMENT-MAIN-5 ********************/
+
+    .element-footer-1{
+
+    }
+
+/******************************************************** IMPORT ********************************************************/
+
