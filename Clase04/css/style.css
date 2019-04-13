@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*cuantas columnas y su tamanio*/
+    grid-template-columns: repeat(3, 1fr); /*idem anterior*/
+    grid-template-rows: repeat(3, 1fr);   /**/
+    justify-items: center; /* para mover grupos de elementos*/
+    place-items: center center; /*aling justify*/
+}
+    .hijo{
+        grid-column: 1/2; /*linea de comienzo / linea final*/
+        grid-row: 1/2;
+    }
+
+        .item{
+            justify-self: center; /*alinea en eje x*/
+            align-self: center; /*alinea en eje y*/
+            
+        }
+
+/**************************************** GRILLAS POR AREA ****************************************/
+
+.item-a{
+    grid-area: main;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*cuantas columnas y su tamanio*/
+    grid-template-rows: auto;
+    grid-template-areas:    "header header header header"
+                            "main main . main"  /*con el punto queda un espacio*/
+                            "footer footer footer footer"
+}
+
+   
