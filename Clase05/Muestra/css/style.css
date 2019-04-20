@@ -1,0 +1,95 @@
+*{
+    margin: 1rem;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: coral;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:    "header header"
+                            "main aside"
+                            "footer footer";
+    
+}
+
+.header, .main, .footer{
+    background: linear-gradient(to right, violet, black);
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+    .logo{
+        background: white;
+        border-radius: 50px;
+    }
+
+    .menu{
+        background: white;
+    }
+
+.main{
+    grid-area: main;
+}
+
+    .articulos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        position: relative;
+    }
+
+        article{
+            background: white;
+        }
+
+        article:hover{
+            background: rgb(158, 158, 38);
+            border-radius: 35px;
+
+            transition: all 1s linear;
+        }
+
+        #tres{
+            position: absolute;
+            background: blue;
+            box-shadow: 3px 3px 15px 3px;
+        }
+
+.aside{
+    grid-area: aside;
+    background: red;;
+}
+
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+    .contacto, .redes{
+        background: white;
+    }
+
+    /*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+    .aside{
+        display: none;
+    }
+
+    .articulos{
+        display: block;
+    }
+
+    .footer{
+        display: block;
+    }
+}
