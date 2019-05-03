@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.autos{
+    width: 100%;
+}
+
+#auto1{
+    transform: translateX(300px);
+    transition: all 3s ease-in-out;
+}
+
+#auto2{
+    animation: auto2 2s linear infinite normal;
+}
+
+
+
+@keyframes auto2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
