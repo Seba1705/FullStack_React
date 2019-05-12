@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <style>
+    
+    *{
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .container{
+        display: flex;
+        flex-flow: column wrap;
+        width: 30%;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="num1" placeholder="Numero 1...">
+        <label for="" id="operador"></label>
+        <input type="number" id="num2" placeholder="Numero 2...">
+        <button id="btnSuma">+</button>
+        <button id="btnResta">-</button>
+        <button id="btnMulti">*</button>
+        <button id="btnDiv">/</button>
+        <button id="btnIgual">=</button>
+        <input tipe="number" id="resultado" disabled></input>
+    </div>
+
+    <script src="./js/scriptCalculadora.js"></script>
+</body>
+</html>
