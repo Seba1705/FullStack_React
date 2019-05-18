@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styleFormulario.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div id="contModal">
+        <div id="modal">
+            <span>Nombre: </span><span id="sNombre"></span><br>
+            <span>Apellido: </span><span id="sApellido"></span><br>
+            <span>Tipo de bullying: </span><span id="sTipo"></span><br>
+            <span>Barrio: </span><span id="sBarrio"></span><br>
+            <span>Contacto: </span><span id="sContacto"></span><br>
+            <span>Mensaje</span><span id="sMensaje"></span><br>
+        </div>
+    </div>
+
+    <div id="contFormulario">
+        <form action="" class="frmFormulario">
+            
+            <label for="">Nombre</label>
+            <input type="text" class="input" id="txtNombre">
+            <label for="">Apellido</label>
+            <input type="text" id="txtApellido" >
+            
+            <label for="redes">
+                <label for="">Tipo de bullying</label>  
+                <label>Virtual (redes sociales)</label><input type="radio" name="radio" id="radSociales" checked/>
+                <label>Personal</label><input type="radio" name="radio" id="radPersonal"/>
+            </label>
+            <label for="">Barrio</label>
+            <select name="" id="selectBarrio">
+                 
+            </select>
+            <label for="">Contacto (Email)</label>
+            <input type="text" id="txtContacto">
+            <label for="">Mensaje</label>
+            <textarea name="" id="areaMensaje" cols="30" rows="10"></textarea>
+            <input type="button" id="btnEnviar" value="Enviar"></input>
+        </form>
+    </div>
+  
+    <script src="./js/scriptFormulario.js"></script>
+</body>
+</html>
