@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="container">
+    <div class="container">
+        <div class="wrapper">
+            <form action="">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <input type="text" name="barrio" id="barrio" placeholder="Barrio">
+                <input type="mail" name="mail" id="mail" placeholder="Mail">
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Deje su mensaje"></textarea>
+                <input type="button" value="Enviar" id="actionModal">
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-container">
+            <div class="modal-header">Verifique los datos</div>
+            <div class="modal-content">
+            <p>Nombre: <span></span></p>
+            <p>Apellido: <span></span></p>
+            <p>Barrio: <span></span></p>
+            <p>Mail: <span></span></p>
+            <p>Comentario: <span></span></p>
+            </div>
+        </div>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>
