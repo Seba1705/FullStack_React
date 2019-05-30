@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div id="frm-container">
+        <form action="" class="formulario">
+            <div class="column-left">
+                <p>Nombre:</p>
+                <p>Apellido:</p>
+                <p>Tipo de Bullying:</p>
+                <p>Barrio:</p>
+                <p>Contacto:</p>
+                <p>Mensaje:</p>
+            </div>
+            <div class="column-right">
+                <input type="text" placeholder="Ingrese su nombre" id="input-name"> <br>
+                <input type="text" placeholder="Ingrese su apellido" id="input-lastname"> <br>
+                <section id="radios">
+                    <input type="radio" id="input-social" name="radios"><label for="input-social">Redes sociales</label>
+                    <input type="radio" id="input-personal" name="radios"><label for="input-personal">Personal</label> 
+                </section>
+                <select name="barrio" id="input-barrio"></select> <br>
+                <input type="text" placeholder="Ingrese su email" id="input-contact"> <br>
+                <textarea name="" id="input-messege" cols="30" rows="10" placeholder="Ingrese su mensaje" ></textarea>
+                <input type="button" id="btn-enviar" value="Enviar">
+            </div>
+        </form>
+    </div>
+
+    <div id="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                Datos Enviados
+            </div>
+            <div class="modal-content">
+                <p>Nombre: </span><span id="sNombre"></p>
+                <p>Apellido: </span><span id="sApellido"></p>
+                <p>Tipo de bullying: </span><span id="sTipo"></p>
+                <p>Barrio: </span><span id="sBarrio"></p>
+                <p>Contacto: </span><span id="sContacto"></p>
+                <p>Mensaje</span><span id="sMensaje"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/cript.js"></script>
+</body>
+</html>

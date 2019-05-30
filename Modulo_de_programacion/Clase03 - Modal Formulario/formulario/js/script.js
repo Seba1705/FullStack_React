@@ -4,7 +4,7 @@ function $(id){
 }
 
 var btnEnviar = $("btnSend"),
-    modal = $("myModal"),
+    modal = $("contModal"),
     span = document.getElementsByClassName("close")[0];
 
 function enviarFormulario(e){
