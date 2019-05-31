@@ -4,10 +4,11 @@
 .container{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
     grid-gap: 10px;
     background-color: #f2f2f2;
- 
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* COLUMNA IZQUIERDA */
@@ -72,4 +73,68 @@
 .container-14{ 
     grid-column: 2/3;
     grid-row: 7/8;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 400px) {
+    
+    .container{
+        display: flex;
+        flex-flow: column wrap;
+            
+    }
+
+    .container  input[type="text"], 
+                textarea, 
+                input[type="button"],
+                section,
+                select{
+        width: 100%;
+        padding: 10px;
+    }
+    label{
+        margin: 10px;
+    }
+}
+
+/* ESTILOS INPUTS */
+
+.container  input[type="text"], 
+            textarea, 
+            input[type="button"],
+            section,
+            select{
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;  
+}
+
+.container  input[type="text"]:hover,
+            textarea:hover, 
+            input[type="button"]:hover{
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;         
+}
+
+.container input[type="button"]{
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.container input[type="button"]:hover{
+    background: #43A047;
 }
