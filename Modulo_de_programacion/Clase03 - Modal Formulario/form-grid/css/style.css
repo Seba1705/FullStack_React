@@ -138,3 +138,49 @@
 .container input[type="button"]:hover{
     background: #43A047;
 }
+
+/* MODAL */
+
+#modal-container{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.4);
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    animation: aparecer 2s;
+}
+
+.modal{
+    width: 400px;
+    height: auto;
+}
+
+.modal .modal-header{
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid grey;
+    font-size: 1.5rem;
+}
+
+.modal .modal-content{
+    background-color: white;
+    padding:1rem 2rem;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ERROR */
+
+.error{
+    border: 1.5px solid red;
+}
