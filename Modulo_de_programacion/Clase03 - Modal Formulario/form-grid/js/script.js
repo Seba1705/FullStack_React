@@ -71,7 +71,7 @@ function validarTexto(texto){
 
 function validarEmail(email){ 
     let regMail = new RegExp(/^\w@\w.[aA-zZ]{1-4}(.[aA-zZ]{1-3})$/i);
-    if(texto === "" || texto.length > 100 || !regMail.test(texto)){
+    if(email === "" || email.length > 100 || !regMail.test(email)){
         return false;
     }
     return true;
@@ -84,26 +84,32 @@ function enviarFormulario(e){
     let name = $('input-name'),
         lastname = $('input-lastname'),
         tipo = $('input-social').checked ? 'Redes Sociales' : 'Personal',
-        barrio = $('input-barrio').value;
+        barrio = $('input-barrio').value,
+        email = $('input-contact');
 
     if(validarTexto(name.value)){
         if(validarTexto(lastname.value)){
-            e.preventDefault();
-            //Cargo los campos del modal
-            $('modal-name').textContent = name.value;
-            $('modal-lastname').textContent = lastname.value;
-            $('modal-type').textContent = tipo;
-            $('modal-barrio').textContent = barrio;
-            //Borro los input
-            name.value = "";
-            lastname.value = "";
-            //Muestro el modal
-            mostrarModal();  
+            if(validarEmail(email.value)){
+                e.preventDefault();
+                //Cargo los campos del modal
+                $('modal-name').textContent = name.value;
+                $('modal-lastname').textContent = lastname.value;
+                $('modal-type').textContent = tipo;
+                $('modal-barrio').textContent = barrio;
+                $('modal-contact').textContent = email.value;
+                //Borro los input
+                name.value = "";
+                lastname.value = "";
+                email.value = "";
+                //Muestro el modal
+                mostrarModal(); 
+            } 
         }
     }
     else{
         name.setCustomValidity('Ingresar nombre');
         lastname.setCustomValidity('Ingrese su apellido');
+        email.setCustomValidity('Ingrese su email');
     } 
 }
 
