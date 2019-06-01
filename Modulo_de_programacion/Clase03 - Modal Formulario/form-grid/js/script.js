@@ -3,44 +3,133 @@ function $(id){
 }
 
 var btnEnviar = $("btn-send"),
-    modal = $("modal-container");
+    modal = $("modal-container"),
+    barrios = ["Agronomía",
+"Almagro",
+"Balvanera",
+"Barracas",
+"Belgrano",
+"Boedo",
+"Caballito",
+"Chacarita",
+"Coghlan",
+"Colegiales",
+"Constitución",
+"Flores",
+"Floresta",
+"La BocaLa Paternal",
+"Liniers",
+"Mataderos",
+"Monte Castro",
+"Monserrat",
+"Nueva Pompeya",
+"Núñez",
+"Palermo",
+"Parque Avellaneda",
+"Parque Chacabuco",
+"Parque Chas",
+"Parque Patricios",
+"Puerto Madero",
+"Recoleta",
+"Retiro",
+"Saavedra",
+"San Cristóbal",
+"San Nicolás",
+"San Telmo",
+"Vélez Sársfield",
+"Versalles",
+"Villa Crespo",
+"Villa del Parque",
+"Villa Devoto",
+"Villa General Mitre",
+"Villa Lugano",
+"Villa Luro",
+"Villa Ortúzar",
+"Villa Pueyrredón",
+"Villa Real",
+"Villa Riachuelo",
+"Villa Santa Rita",
+"Villa Soldati",
+"Villa Urquiza"];
     
-function enviarFormulario(e){
-    var name = $("input-name"),
-        lastname = $("input-lastname"),
-        type = $("input-")
-        contact = $("input-contact");
-    // VALIDACION DE INPUTS
-    if(validarText(name, e) && validarText(lastname, e) && validarText(contact, e)){
-        // CARGAR CONTENIDO EN MODAL
-        $("modal-name").textContent = name.value;
-        $("modal-lastname").textContent = lastname.value;
-        $("modal-contact").textContent = contact.value;
-        // LIMPIAR INPUTS 
-        name.value="";
-        lastname.value="";
-        contact.value="";
-        // MUESTRO EL MODAL
-        modal.style.display = "flex";
-    }
-}
-
-btnEnviar.addEventListener("click", enviarFormulario);
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        ocultarModal();
     }
 }
 
-function validarText(input,e){
-    if(input.value == ""){
-        e.preventDefault();
-        input.style.border = "1.5px solid red";
+//Validaciones
+
+function validarTexto(texto){ 
+    let regText = new RegExp(/^[a-z\s]{1,20}$/i);
+    if(texto === "" || texto.length > 20 || !regText.test(texto)){
         return false;
-    }else{
-        input.style.border = "1.5px solid #ccc";
-        return true;
     }
+    return true;
+}
+
+function validarEmail(email){ 
+    let regMail = new RegExp(/^\w@\w.[aA-zZ]{1-4}(.[aA-zZ]{1-3})$/i);
+    if(texto === "" || texto.length > 100 || !regMail.test(texto)){
+        return false;
+    }
+    return true;
+}
+
+
+//Enviar formulario
+
+function enviarFormulario(e){
+    let name = $('input-name'),
+        lastname = $('input-lastname'),
+        tipo = $('input-social').checked ? 'Redes Sociales' : 'Personal',
+        barrio = $('input-barrio').value;
+
+    if(validarTexto(name.value)){
+        if(validarTexto(lastname.value)){
+            e.preventDefault();
+            //Cargo los campos del modal
+            $('modal-name').textContent = name.value;
+            $('modal-lastname').textContent = lastname.value;
+            $('modal-type').textContent = tipo;
+            $('modal-barrio').textContent = barrio;
+            //Borro los input
+            name.value = "";
+            lastname.value = "";
+            //Muestro el modal
+            mostrarModal();  
+        }
+    }
+    else{
+        name.setCustomValidity('Ingresar nombre');
+        lastname.setCustomValidity('Ingrese su apellido');
+    } 
+}
+
+//Manejador de eventos
+
+btnEnviar.addEventListener("click", enviarFormulario);
+
+//Cargar la lista en el select
+
+function cargarBarrios(barrios){
+    let selector = $('input-barrio');
+    barrios.forEach(element => {
+        let item = document.createElement('option');
+        item.textContent = element;
+        selector.appendChild(item);
+    });
+}
+
+cargarBarrios(barrios);
+
+// Mostrar y ocultar modal
+
+function mostrarModal() {
+    $('modal-container').style.display = 'flex';
+}
+
+function ocultarModal() {
+    $('modal-container').style.display = 'none';
 }

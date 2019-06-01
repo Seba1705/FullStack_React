@@ -1,0 +1,17 @@
+validar vacio - largo - usar focus - expresiones regulares (/<patron>/)
+Elementos [] () {} / | * + $ ? 
+var regEx = /[DP]-[0123456789]{1,8}/  //
+[] cadena de caracteres validos
+- se toma tal cual
+{n, m} cantidad de caracteres permitidos n = min m = max, va al lado de la expresion entre []
+Las expresiones se guardan dentro de metodos
+() agrupa elementos y con ? decimos que es opcional 
+/i al final para no discriminar entre mayusculas y minisculas
+^ y $ se usan al principio y al final para delimiar la expresion 
+\ seguido el caracter
+\w y \d comprenden el universo de los numeros y letras
+var dni = 'P-11223ooopp344';
+var dniRegExp = new RegExp(/^[DP]-[0123456789]{1,8}$/); //  /[DP]-\d{1,8}/
+var resultado = dniRegExp.test(dni); // retorna true o false
+console.log(resultado);
+crear option cargar barrio y hacer appenChild
