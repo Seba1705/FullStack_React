@@ -69,8 +69,10 @@ function validarTexto(texto){
     return true;
 }
 
+// /^\w@\w.[aA-zZ]{1-4}(.[aA-zZ]{1-3})$/
+// /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 function validarEmail(email){ 
-    let regMail = new RegExp(/^\w@\w.[aA-zZ]{1-4}(.[aA-zZ]{1-3})$/i);
+    let regMail = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/);
     if(email === "" || email.length > 100 || !regMail.test(email)){
         return false;
     }
@@ -103,13 +105,16 @@ function enviarFormulario(e){
                 email.value = "";
                 //Muestro el modal
                 mostrarModal(); 
+            }else{
+                email.setCustomValidity('Ingrese un email valido');
             } 
+        }
+        else{
+            lastname.setCustomValidity('El Apellido es incorrecto');
         }
     }
     else{
-        name.setCustomValidity('Ingresar nombre');
-        lastname.setCustomValidity('Ingrese su apellido');
-        email.setCustomValidity('Ingrese su email');
+        name.setCustomValidity('El nombre es incorrecto');
     } 
 }
 
