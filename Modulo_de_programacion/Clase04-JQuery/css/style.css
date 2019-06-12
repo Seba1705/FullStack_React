@@ -9,6 +9,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 input[type="text"], 
@@ -90,8 +91,8 @@ label{
     display: flex;
     flex-flow: column wrap;
     width: 50%;
-    //background: #eee;
-    margin: 20px;
+    /* background: #eee; */
+    justify-self: center;
 }
 
 #botones .rojo{
@@ -142,16 +143,23 @@ label{
 .estrellas label{
     background: #eee;
     font-size: 25px;
+    background: #eee;
 }
 
 .estrellas input[type='radio']{
     display: none;
 }
 
-.fa-star{
-    background: #eee;
+.estrellas label:hover,
+           label:hover ~ label {
+    color: orange;
 }
 
-.fa-star:hover{
+.estrellas {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+  
+.estrellas input[type="radio"]:checked ~ label {
     color: orange;
 }
