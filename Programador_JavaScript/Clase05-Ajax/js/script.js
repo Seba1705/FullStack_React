@@ -42,9 +42,9 @@ function manipularObjetoJson(objJson){
 }
 
 $(function(){
-    // peticionFetch();
-    $('#btn-enviar').click(cambiarPregunta);
-    hacerPreguntas(arrPreguntas);
+    peticionFetch();
+    // $('#btn-enviar').click(cambiarPregunta);
+    // hacerPreguntas(arrPreguntas);
 });
 
 /**************************************************************************************************/
