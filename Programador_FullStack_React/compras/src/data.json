@@ -1,0 +1,26 @@
+[
+    {
+        "nombre" : "Iphone 5",
+        "precio" : 150,
+        "stock" : 5,
+        "pic" : "images/iphone-5.png"
+    },
+    {
+        "nombre" : "Iphone 6",
+        "precio" : 200,
+        "stock" : 5,
+        "pic" : "images/iphone-5.png"
+    },
+    {
+        "nombre" : "Iphone 7",
+        "precio" : 250,
+        "stock" : 9,
+        "pic" : "images/iphone-5.png"
+    },
+    {
+        "nombre" : "Iphone 8",
+        "precio" : 320,
+        "stock" : 5,
+        "pic" : "images/iphone-5.png"
+    }
+]

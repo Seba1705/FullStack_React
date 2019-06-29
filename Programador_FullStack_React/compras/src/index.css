@@ -1,0 +1,60 @@
+body {
+    background-color: azure;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+.producto {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+}
+
+form {
+    width: 600px;
+}
+
+
+input[type=text],input[type=number]  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button.comprar {
+    background-color: #991100;
+}
+
+button.comprar {
+    background-color: #0011aa;
+}
+
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.total {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 80px;
+}
+
+img {
+    width: 100px;
+    height: 140px;
+}
+
