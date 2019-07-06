@@ -20,7 +20,7 @@ class Producto extends Component{
 
     render(){
         return(
-            <div>
+            <div className='producto'>
                 <img src={this.props.pic} alt=""/>
                 <p>{this.props.nombre} - u$s{this.props.precio}</p>
                 <p>Stock: {this.state.stock}</p>

@@ -1,13 +1,14 @@
 import React, { Component} from 'react';
 import ReactDOM from 'react-dom';
-import ListaProductos from './ListaProductos';
+import App from './App';
+import './index.css';
 
 class Index extends Component{
     render(){
         return(
-            <ListaProductos />
+            <App/>
         )
     }
 }
 
-ReactDOM.render(<Index/>, document.getElementById('root'));
+ReactDOM.render(<Index/>, document.querySelector('#root'));

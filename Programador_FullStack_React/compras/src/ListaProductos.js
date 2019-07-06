@@ -41,7 +41,9 @@ class ListaProductos extends Component{
                 <FormProductos
                     evtCrearProducto={this.crearProducto}
                 />
-                {productos}
+                <div className='flex-container'>
+                    {productos}
+                </div>
                 <Total total={this.state.total}/> 
             </div>
         )
