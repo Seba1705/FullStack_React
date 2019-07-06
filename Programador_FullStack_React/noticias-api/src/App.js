@@ -28,7 +28,7 @@ export default class App extends Component {
     render() {
         return (
             <div className='contenedor-app'>
-                <Header titulo='Noticias de Argentina'/>
+                <Header titulo='Noticias'/>
                 <div className='container white contenedor-noticias'>
                     <Formulario consultarNoticias={this.consultarNoticias}/>
                     <Noticias noticias={this.state.noticias}/>
