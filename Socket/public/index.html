@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -8,7 +8,6 @@
         <title>Chat</title>
     </head>
     <body>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-6 m-5 ">
@@ -37,4 +36,103 @@
         <script src="socket.io/socket.io.js"></script>
         <script src="./js/socket_cliente.js"></script>
     </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Chat</title>
+		<style>
+			body {
+				background: #f9f9f9;
+			}
+
+			#contenedor {
+				width: 700px;
+				margin: 0 auto;
+			}
+
+			#Chat {
+				height: 300px;
+			}
+
+			#main {
+				display: none;
+			}
+
+			#mensajes {
+				float: left;
+				border: 1px #ccc solid;
+				border-radius: 10px;
+				background: #f4f4f4;
+				padding: 10px;
+			}
+
+			#usuarios {
+				float: left;
+				border: 1px #ccc solid;
+				border-radius: 10px;
+				background: #f4f4f4;
+				padding: 10px;
+				margin-left: 20px;
+				width: 150px;
+				max-height: 200px;
+			}
+
+			#nombres {
+				float: left;
+				border: 1px #ccc solid;
+				border-radius: 10px;
+				background: #f4f4f4;
+				padding: 10px;
+				margin-left: 20px;
+			}
+
+			input {
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="contenedor">
+			<div id="nombres">
+				<h2>Chat</h2>
+				<p>Crear Usuario:</p>
+
+				<form id="FormUsuarios">
+					<input size="35" id="username" />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+
+			<div id="main">
+				<h2>Chat</h2>
+
+				<div id="mensajes">
+					<div id="Chat"></div>
+
+					<form id="FormMensajes">
+						<input
+							size="35"
+							id="message"
+							placeholder="Escribir algo..."
+						/>
+						<input type="submit" value="enviar!" />
+					</form>
+				</div>
+
+				<div id="usuarios">
+					<div id="users"></div>
+				</div>
+            </div>
+            <div id="error">
+
+            </div>
+		</div>
+		<script src="socket.io/socket.io.js"></script>
+		<script src="js/chat_cliente.js"></script>
+	</body>
 </html>

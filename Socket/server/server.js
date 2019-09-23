@@ -12,7 +12,7 @@ app.use( express.static( publicPath ));
 
 module.exports.io = socketIO( server );
 
-require( './sockets/socket' );
+require( './sockets/chat_server.js' );
 
 
 server.listen( port, err => {
